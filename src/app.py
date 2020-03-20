@@ -16,7 +16,7 @@ def rootUrl(variable):
     filterDict = {}
     filterDict = dict(args)
     for key in filterDict.keys():
-        filterDict[key] = filterDict[key].split(',')
+        filterDict[key] = filterDict[key][0].split(',')
     page = int(variable) - 1
     json_data = fetchDataFromDataBase(filterDict, page)
     if(json_data == []):
